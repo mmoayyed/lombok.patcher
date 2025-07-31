@@ -1,5 +1,5 @@
 <!--
-  Copyright (C) 2009-2018 The Project Lombok Authors.
+  Copyright (C) 2009-2025 The Project Lombok Authors.
   
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -205,7 +205,7 @@
 	</target>
 	
 	<target name="eclipse" depends="deps, contrib" description="Creates eclipse project files and downloads all dependencies. Open this directory as project in eclipse after running this target.">
-		<ivy:eclipsegen source="1.5">
+		<ivy:eclipsegen source="1.8"> <!-- 1.5 would be optimal, but as of 2025, eclipse has started to drop support for it, and the amount of effort we want to put into maintaining support for 1.7 and lower does not extend into 'maintain ancient eclipse versions just for working on patcher' -->
 			<srcdir dir="src/patcher" />
 			<srcdir dir="src/injector" />
 			<srcdir dir="test" />
